@@ -1,5 +1,6 @@
 import React from 'react';
 import './intro.css';
+import Me from '../../Image/me.jpg';
 function Intro() {
   return <div className='intro'>
       <div className='intro-left'>
@@ -12,12 +13,15 @@ function Intro() {
                         <div className="intro-title-item">React.js Developer</div>
                     </div>
           </div>
-          <div className="intro-desc"> 
+          <p className="intro-desc"> 
             I am a software developer I am here to help to develop software that is going to meet individual client needs. I am improving my skills day by day to a more clean and optimized code. I believe in constant learning and exploring new things. a bit about me, I like to travel and i am big foodie
-          </div>
+          </p>
           </div>
       </div>
-      <div className='intro-right'>right</div>
+      <div className='intro-right'>
+        <div className="intro-image-bg"></div>
+        {/* <img className="intro-me" src={Me} alt=""/> */}
+      </div>
   </div>;
 }
 
