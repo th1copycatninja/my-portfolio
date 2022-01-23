@@ -1,5 +1,5 @@
 .c {
-  height: 70vh;
+  height: 100vh;
 }
 .c-bg {
   width: 20px;
@@ -60,4 +60,28 @@ button {
   color: #fff;
   font-weight: 500;
   cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .c-wrapper {
+    flex-direction: column;
+    padding: 0px 50px;
+  }
+  .c-info-item {
+    margin: 20px 0px;
+    width: 100%;
+  }
+  form {
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  input {
+    width: 35%;
+    height: 40px;
+    margin: 10px;
+    margin-left: 10px;
+  }
+  button {
+    margin-top: 10px;
+  }
 }

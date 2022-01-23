@@ -1,6 +1,5 @@
 import React from 'react';
 import './intro.css';
-import Me from '../../Image/me.jpg';
 function Intro() {
   return <div className='intro'>
       <div className='intro-left'>
