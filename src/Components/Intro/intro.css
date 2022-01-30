@@ -110,4 +110,12 @@
     /* padding: 0px; */
     height: 100%;
   }
+  @keyframes move {
+    50% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(10px);
+    }
+  }
 }
