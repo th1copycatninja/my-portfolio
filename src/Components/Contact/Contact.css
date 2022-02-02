@@ -32,9 +32,10 @@
 .c-right {
   flex: 1;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   flex-direction: column;
+  /* background-color: blue; */
 }
 form {
   margin-top: 20px;
@@ -47,11 +48,13 @@ input {
   margin: 10px 10px;
   font-size: 14px;
   padding-left: 10px;
+  display: block;
+  /* background-color: yellow; */
 }
 
 textarea {
   width: 100%;
-  margin: 10px 0px;
+  margin: 10px 10px;
   font-size: 14px;
   padding-left: 10px;
 }
@@ -63,6 +66,21 @@ button {
   color: #fff;
   font-weight: 500;
   cursor: pointer;
+  margin: 20px 10px;
+}
+.c-p-container[data-error]::after {
+  /* background-color: red; */
+  content: attr(data-error);
+  width: 100%;
+  height: 50px;
+  /* border-bottom: 1px solid black; */
+  margin: 10px 10px;
+  color: red;
+  /* justify-content: center;
+  align-items: center; */
+  /* display: table; */
+  /* width: 100%; */
+  /* flex: 1; */
 }
 @media screen and (max-width: 480px) {
   .c-wrapper {
