@@ -1,7 +1,7 @@
 import React,{useContext} from 'react';
 import Toggle from '../Toggle/Toggle';
 import "./NavBar.css"
-import Logo from "../../Image/logo.svg";
+import Logo from "../../Image/nameLogo.png";
 import { ThemeContext } from '../../Context';
 const NavBar = () =>{
     const theme = useContext(ThemeContext);
