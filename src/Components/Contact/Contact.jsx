@@ -9,10 +9,7 @@ import { ThemeContext } from "../../Context";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 export default function Contact() {
-  //   const [fullName, setFullName] = useState("");
-  //   const [subject, setSubject] = useState("");
-  //   const [email, setEmail] = useState("");
-  //   const [message, setMessage] = useState("");
+  
   const theme = useContext(ThemeContext);
   const darkmode = theme.state.darkmode;
 
@@ -38,24 +35,29 @@ export default function Contact() {
         .max(70, "Message must be less than 70 characters")
         .required("message is required"),
     }),
-    onSubmit: (values) => {
+    onSubmit: (values,{resetForm}) => {
       console.log("formik values", values);
+      handleSubmit(values,resetForm)
     },
   });
 
-  //   const handleSubmit = (e) => {
-  //     console.log("formik values",formik.values);
-  //     e.preventDefault();
-  //     // emailjs.sendForm('service_dsq5txp', 'template_k9yxavn', formRef.current, 'user_xKCk8ezVwJzqp0ictUPBy')
-  //     // .then((result) => {
-  //     //     console.log(result.text);
-  //     //     formRef.current.reset();
-  //     //     alert("Thanks")
-  //     // }, (error) => {
-  //     //     console.log(error.text);
-  //     // });
-  //   };
-  console.log("formik errors", formik.errors);
+    const handleSubmit = (e,resetForm) => {
+     
+      try{
+      emailjs.send('service_dsq5txp', 'template_k9yxavn', e, 'user_xKCk8ezVwJzqp0ictUPBy')
+      .then((result) => {
+          console.log(result);
+          resetForm()
+         
+      }, (error) => {
+          console.log(error);
+      });
+    }
+    catch (error) {
+      console.log(error)
+    }
+    };
+ 
   return (
     <div className="c">
       <div className="c-bg"></div>
