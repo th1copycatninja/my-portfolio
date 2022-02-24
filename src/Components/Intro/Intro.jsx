@@ -1,8 +1,10 @@
 import React from "react";
+import NavBar from "../NavBar/NavBar";
 import "./intro.css";
 export default function Intro() {
   return (
     <div className="intro">
+      {/* <NavBar/> */}
       <div className="intro-left">
         <section className="intro-left-wrapper">
           <p>Hello, I'm</p>

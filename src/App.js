@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import { ThemeContext } from "./Context";
 import Project from "./Components/MyProject/Project";
+import {Routes,Route} from 'react-router-dom'
 function App() {
   const theme = useContext(ThemeContext);
   const darkmode = theme.state.darkmode;
@@ -20,12 +21,20 @@ function App() {
         color: darkmode ? "#fff" : "#0284c7",
       }}
     >
-      <Toggle />
+      {/* <NavBar />
+      <Routes>
+      <Route path="/" element={<Intro/>}/>
+     
+      <Route path="/project" element={<Project/>}/>
+      <Route path="/contact" element={<Contact/>}/>
+      </Routes> */}
+      {/* <Toggle /> */}
       <NavBar />
       <Intro />
       <Project/>
       <Contact />
       <ToastContainer/>
+       <ToastContainer/>
     </div>
   );
 }

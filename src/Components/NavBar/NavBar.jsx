@@ -3,6 +3,7 @@ import Toggle from '../Toggle/Toggle';
 import "./NavBar.css"
 import Logo from "../../Image/nameLogo.png";
 import { ThemeContext } from '../../Context';
+import { Link } from "react-router-dom";
 const NavBar = () =>{
     const theme = useContext(ThemeContext);
   const darkmode = theme.state.darkmode;
@@ -15,7 +16,7 @@ const NavBar = () =>{
                     </a>
                     <nav>
                         <ul className="nav-ul-container">
-                                <li className="nav-li-item">
+                                {/* <li className="nav-li-item">
                                     <a style={{color:darkmode && "#fff"}} >Home</a>
                                 </li>
                                 <li className="nav-li-item">
@@ -23,9 +24,13 @@ const NavBar = () =>{
                                 </li>
                                 <li className="nav-li-item">
                                     <a style={{color:darkmode && "#fff"}}>Contact</a>
-                                </li>
+                                </li> */}
+                                   <Link style={{color:darkmode && "#fff"}} className="nav-li-item" to="/">Home</Link> 
+                             <Link style={{color:darkmode && "#fff"}} className="nav-li-item" to="/project">Project</Link>
+                             <Link style={{color:darkmode && "#fff"}} className="nav-li-item" to="/contact">Contact</Link>
                         </ul>
                        
+     
                             <Toggle/>
                        
                     </nav>
