@@ -8,8 +8,10 @@ import emailjs from "@emailjs/browser";
 import { ThemeContext } from "../../Context";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import {toast } from 'react-toastify';
+import { Oval } from  'react-loader-spinner'
 export default function Contact() {
-  
+    const [isLoader,setLoader] = useState(false)
   const theme = useContext(ThemeContext);
   const darkmode = theme.state.darkmode;
 
@@ -42,14 +44,29 @@ export default function Contact() {
   });
 
     const handleSubmit = (e,resetForm) => {
-     
+     setLoader(true)
       try{
-      emailjs.send('service_dsq5txp', 'template_k9yxavn', e, 'user_xKCk8ezVwJzqp0ictUPBy')
+      emailjs.send(process.env.REACT_APP_Email_Js_ServiceId,
+         process.env.REACT_APP_Email_Js_TemplateId,
+          e,
+           process.env.REACT_APP_Email_Js_UserId)
       .then((result) => {
           console.log(result);
+          if(result.status === 200){
+            toast.info('Thank you for contacting me i will be back to you soon.', {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              });
+          }
           resetForm()
-         
+          setLoader(false)
       }, (error) => {
+        setLoader(false)
           console.log(error);
       });
     }
@@ -180,7 +197,18 @@ export default function Contact() {
                 onBlur={formik.handleBlur}
               ></textarea>
             </div>
-            <button>Submit</button>
+            {isLoader
+            ?
+            <div className="loader-button">
+                <Oval color="#00BFFF" height={20} width={20} />
+            </div>
+            :
+            // <button>Submit</button>
+            <button   className="submit-button">
+               <p style={{color:darkmode ? "#fff":"#0284c7"}}>Submit</p>
+            </button>
+            }
+           
           </form>
         </div>
       </div>
