@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Contact from "./Components/Contact/Contact";
-import Intro from "./Components/Intro/intro";
+import Intro from "./Components/Intro/Intro";
 import Toggle from "./Components/Toggle/Toggle.jsx";
 import NavBar from "./Components/NavBar/NavBar";
 import "slick-carousel/slick/slick.css";
