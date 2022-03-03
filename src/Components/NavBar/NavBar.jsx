@@ -9,14 +9,14 @@ const NavBar = () =>{
   const darkmode = theme.state.darkmode;
 
     return(
-        <div className="n-main-container" style={{backgroundColor:darkmode && "rgb(35, 35, 35)"}}>
+        <div className="n-main-container" style={{backgroundColor:darkmode && "#242B2E"}}>
             <div className="n-wrapper">
                     <a className="logo">
                             <img className="n-logo" src={Logo} alt="Govind Maheshwari"/>
                     </a>
                     <nav>
-                        <ul className="nav-ul-container">
-                                {/* <li className="nav-li-item">
+                        {/* <ul className="nav-ul-container">
+                                <li className="nav-li-item">
                                     <a style={{color:darkmode && "#fff"}} >Home</a>
                                 </li>
                                 <li className="nav-li-item">
@@ -24,14 +24,14 @@ const NavBar = () =>{
                                 </li>
                                 <li className="nav-li-item">
                                     <a style={{color:darkmode && "#fff"}}>Contact</a>
-                                </li> */}
-                                   <Link style={{color:darkmode && "#fff"}} className="nav-li-item" to="/">Home</Link> 
+                                </li>
+                                
+                        </ul> */}
+                          {/* <Link style={{color:darkmode && "#fff"}} className="nav-li-item" to="/">Home</Link> 
                              <Link style={{color:darkmode && "#fff"}} className="nav-li-item" to="/project">Project</Link>
-                             <Link style={{color:darkmode && "#fff"}} className="nav-li-item" to="/contact">Contact</Link>
-                        </ul>
-                       
+                             <Link style={{color:darkmode && "#fff"}} className="nav-li-item" to="/contact">Contact</Link> */}
      
-                            <Toggle/>
+                            {/* <Toggle/> */}
                        
                     </nav>
             </div>
