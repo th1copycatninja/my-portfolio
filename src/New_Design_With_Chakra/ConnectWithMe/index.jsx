@@ -3,7 +3,7 @@ import { Center, Box, HStack, IconButton, VStack } from "@chakra-ui/react";
 import { BsGithub,BsLinkedin,BsTwitter } from "react-icons/bs";
 export default function ConnectWithMe() {
   return (
-    <VStack  align='stretch' h="80px" position={'fixed'} top={[170,200,250]} >
+    <VStack   h="80px" display={{base:"none",md:"block",lg:"block"}} position={'fixed'} top={[170,200,250]} >
       {/* <Center
         w="20%"
         p={1}

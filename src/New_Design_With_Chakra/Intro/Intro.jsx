@@ -1,13 +1,24 @@
 import React from "react";
-import { Box, Container, Text, Button, Center, Image } from "@chakra-ui/react";
+import { Box, Container, Text, Button, Center, Image ,AspectRatio } from "@chakra-ui/react";
 export default function Intro() {
   return (
-    <Container
-     h={[630, 630, 630]} p={[5, 10, 15]} w={'100%'}>
+    <Box 
+    
+     h={{ base:'470px',md:"630px", lg:"630px"}} p={{base:'5px 0px 0px 0px'}} 
+     
+     >
+       {/* <Box
+       display={{base:'block',md:'flex',lg:'flex'}}
+       bg="red"
+       justifyContent={{base:'flex-end',md:'center'}}
+       alignItems={{base:'flex-end',md:'center'}}
+      
+       > */}
+
       <Box
-        w={{ base: "350px", md: "500px", lg: "600px" }}
-        margin={{ base: "5px" }}
-        flex='1'
+        w={{  base:'300px',md: "500px", lg: "500px" }}
+         margin={{ base: "0px 0px 0px 7px",md:"0px auto" ,lg:"0px auto" }}
+      
       >
         <Text
           textAlign={"center"}
@@ -19,13 +30,28 @@ export default function Intro() {
           Govind Maheshwari
         </Text>
       </Box>
+
+      {/* <Box
+         w={{  base:'200px',md: "500px", lg: "200px" }}
+        margin={{ base: "0px 0px 0px 3px",md:"0px auto" ,lg:"0px auto" }}
+        bg="blue"
+      >
+        <Text
+          textAlign={"center"}
+          bgGradient="linear(to-l, #7928CA, #FF0080)"
+          bgClip="text"
+          fontSize={{ base: "30px", md: "34px", lg: "48px" }}
+          fontWeight="extrabold"
+        >
+           Maheshwari
+        </Text>
+      </Box> */}
+
+      {/* </Box> */}
+
       <Box
-        w={{ base: "300px", md: "500px", lg: "600px" }}
-        margin={{
-          base: "5px 0px 0px 5px",
-          md: "0px 0px 0px 0px",
-          lg: "-10px 0px 0px 0px",
-        }}
+        w={{ base:'300px', md: "500px", lg: "600px" }}
+        margin={{ base: "0px 0px 0px -15px",md:"0px auto" ,lg:"0px auto" }} 
       >
         <Text
           textAlign={"center"}
@@ -38,7 +64,7 @@ export default function Intro() {
         </Text>
       </Box>
       <Center
-        margin={{ base: "7px", md: "7px", lg: "15px auto" }}
+          margin={{ base: "10px 0px 0px -15px",md:"0px auto" ,lg:"10px auto" }} 
         w={{ base: "140px", md: "400px", lg: "500px" }}
       >
         <Button
@@ -49,17 +75,17 @@ export default function Intro() {
         </Button>
       </Center>
       <Box
-        margin={{ base: "20px 0px 0px 30px", md: "15gpx", lg: "15px auto" }}
+        margin={{ base: "20px 0px 0px 10px", md: "15gpx", lg: "15px auto" }}
         w={{ base: "300px", md: "400px", lg: "500px" }}
       >
         <Image
           borderRadius="10px"
-          h={{ base: "200px", md: "300px", lg: "300px" }}
+          h={{ base: "150px", md: "300px", lg: "300px" }}
           w={{ base: "250px", md: "400px", lg: "500px" }}
           src={require("../../Image/doug.gif")}
           alt="cool cool cool"
         />
       </Box>
-    </Container>
+    </Box>
   );
 }
