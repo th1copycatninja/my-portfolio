@@ -4,13 +4,13 @@ export default function Intro() {
   console.log( window.innerHeight)
   return (
     <Box
-     h={{base:window.innerHeight,md:window.innerHeight+"px",md:window.innerHeight,md:window.innerHeight+"px",lg:"630px"}} 
-        >
-
+     h={{base:window.innerHeight,md:window.innerHeight+"px",md:window.innerHeight,md:window.innerHeight+"px",lg:"625px"}} 
+       >
+      
       <Box
         w={{  base:'300px',md: "500px", lg: "500px" }}
          margin={{ base: "0px 0px 0px 7px",md:"0px auto" ,lg:"0px auto" }}
-    
+  
       >
         <Text
           textAlign={"center"}
@@ -63,8 +63,7 @@ export default function Intro() {
         />
       </Box>
    
-     
-     
+   
     </Box>
   );
 }
