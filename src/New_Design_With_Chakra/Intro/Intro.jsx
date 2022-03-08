@@ -5,22 +5,13 @@ export default function Intro() {
   console.log( window.innerHeight)
   return (
     <Box 
-    
-     minH={{ base:"630px",md:window.innerHeight+"px", lg:"630px"}} p={{base:'5px 0px 0px 0px'}} 
-     maxH={{base:window.innerHeight+"px",md:window.innerHeight+"px", lg:"630px"}}
+     h={{base:window.innerHeight,md:window.innerHeight+"px"}} 
      >
-       {/* <Box
-       display={{base:'block',md:'flex',lg:'flex'}}
-       bg="red"
-       justifyContent={{base:'flex-end',md:'center'}}
-       alignItems={{base:'flex-end',md:'center'}}
-      
-       > */}
 
       <Box
         w={{  base:'300px',md: "500px", lg: "500px" }}
          margin={{ base: "0px 0px 0px 7px",md:"0px auto" ,lg:"0px auto" }}
-      
+   
       >
         <Text
           textAlign={"center"}
@@ -33,23 +24,7 @@ export default function Intro() {
         </Text>
       </Box>
 
-      {/* <Box
-         w={{  base:'200px',md: "500px", lg: "200px" }}
-        margin={{ base: "0px 0px 0px 3px",md:"0px auto" ,lg:"0px auto" }}
-        bg="blue"
-      >
-        <Text
-          textAlign={"center"}
-          bgGradient="linear(to-l, #7928CA, #FF0080)"
-          bgClip="text"
-          fontSize={{ base: "30px", md: "34px", lg: "48px" }}
-          fontWeight="extrabold"
-        >
-           Maheshwari
-        </Text>
-      </Box> */}
-
-      {/* </Box> */}
+     
 
       <Box
         w={{ base:'300px', md: "500px", lg: "600px" }}
@@ -88,6 +63,9 @@ export default function Intro() {
           alt="cool cool cool"
         />
       </Box>
+   
+     
+     
     </Box>
   );
 }
