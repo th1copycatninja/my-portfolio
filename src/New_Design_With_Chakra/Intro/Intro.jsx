@@ -1,17 +1,17 @@
 import React from "react";
-import { Box, Container, Text, Button, Center, Image ,AspectRatio } from "@chakra-ui/react";
+import { Box, Container, Text, Button, Center, Image, Square, Circle, AspectRatio, Wrap, WrapItem  } from "@chakra-ui/react";
 export default function Intro() {
-  const {height} = window.innerHeight
   console.log( window.innerHeight)
   return (
-    <Box 
+    <Box
      h={{base:window.innerHeight,md:window.innerHeight+"px"}} 
+  as="button"
      >
 
       <Box
         w={{  base:'300px',md: "500px", lg: "500px" }}
          margin={{ base: "0px 0px 0px 7px",md:"0px auto" ,lg:"0px auto" }}
-   
+    
       >
         <Text
           textAlign={"center"}
