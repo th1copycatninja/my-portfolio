@@ -2,10 +2,12 @@ import React from "react";
 import { Box, Container, Text, Button, Center, Image } from "@chakra-ui/react";
 export default function Intro() {
   return (
-    <Container h={[350, 630, 630]} p={[5, 10, 15]} w={[350, 350, 600]}>
+    <Container
+     h={[630, 630, 630]} p={[5, 10, 15]} w={'100%'}>
       <Box
         w={{ base: "350px", md: "500px", lg: "600px" }}
         margin={{ base: "5px" }}
+        flex='1'
       >
         <Text
           textAlign={"center"}
@@ -47,13 +49,13 @@ export default function Intro() {
         </Button>
       </Center>
       <Box
-        margin={{ base: "20px", md: "15gpx", lg: "15px auto" }}
+        margin={{ base: "20px 0px 0px 30px", md: "15gpx", lg: "15px auto" }}
         w={{ base: "300px", md: "400px", lg: "500px" }}
       >
         <Image
           borderRadius="10px"
-          h={{ base: "300px", md: "300px", lg: "300px" }}
-          w={{ base: "300px", md: "400px", lg: "500px" }}
+          h={{ base: "200px", md: "300px", lg: "300px" }}
+          w={{ base: "250px", md: "400px", lg: "500px" }}
           src={require("../../Image/doug.gif")}
           alt="cool cool cool"
         />
