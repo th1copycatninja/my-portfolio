@@ -17,6 +17,7 @@ export default function ConnectWithMe() {
             variant="outline"
             colorScheme="linkedin"
             icon={<BsGithub />}
+            onClick={()=> window.open("https://github.com/govind1530")}
           />
         </Box>
         <Box justifyContent={"center"} w={[100,200,300]} p={3}>
@@ -25,6 +26,7 @@ export default function ConnectWithMe() {
             variant="outline"
             colorScheme="linkedin"
             icon={<BsLinkedin />}
+            onClick={()=> window.open("https://www.linkedin.com/in/govind-maheshwari-75ab32b3/")}
           />
         </Box>
         <Box justifyContent={"center"}w={[100,200,300]} p={3}>
