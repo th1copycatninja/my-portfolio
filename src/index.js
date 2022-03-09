@@ -11,20 +11,20 @@ ReactGA.initialize("UA-196802944-1")
 
 ReactGA.pageview(window.location.pathname + window.location.search);
 //With Out Chakra Ui Design
-// ReactDOM.render(
-//   <BrowserRouter >
-//   {/* <React.StrictMode> */}
-//     <ThemeProvider>
-//       <App />
-//     </ThemeProvider>
-//   {/* </React.StrictMode> */}
-//   </BrowserRouter>,
-//   document.getElementById("root")
-// );
 ReactDOM.render(
-<ChakraProvider>
-<ColorModeScript initialColorMode={theme.config.initialColorMode} />
+  <BrowserRouter >
+  {/* <React.StrictMode> */}
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  {/* </React.StrictMode> */}
+  </BrowserRouter>,
+  document.getElementById("root")
+);
+// ReactDOM.render(
+// <ChakraProvider>
+// <ColorModeScript initialColorMode={theme.config.initialColorMode} />
 
-    <ChakraApp/>
-    </ChakraProvider>
-,document.getElementById("root"))
+//     <ChakraApp/>
+//     </ChakraProvider>
+// ,document.getElementById("root"))

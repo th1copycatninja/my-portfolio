@@ -1,5 +1,6 @@
 import React from 'react'
 import "./intro.css"
+import Cool from '../../Image/doug.gif'
 export default function Intro() {
   return (
     <div  className="intro">
@@ -8,6 +9,9 @@ export default function Intro() {
           <p>Hello, I'm</p>
           <p className="intro-name">Govind Maheshwari</p>
             <h2>Software Developer</h2>
+            
+                <img  className="intro-image"  alt="cool cool cool" src={require("../../Image/doug.gif")}/>
+          
         </section>
       </div>
         </div>

@@ -23,9 +23,35 @@
     font-size: 60px;
   }
 
+.intro-image{
+  border-radius: 3%;
+height: 300px; 
+ margin:15px 0px 0px 0px;
+ width: 380px;
+}
+  
+@media screen and (max-width: 414px) {
+  .intro {
+    flex-direction: column;
+  }
+  .intro-left-wrapper {
+    padding: 0px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+  }
 
-  
-  
+  .intro-name {
+    font-size: 40px;
+  }
+  .intro-image{
+    border-radius: 3%;
+  height: 300px; 
+   margin:15px 0px 0px 0px;
+   width: 280px;
+  }
+}
   @media screen and (max-width: 360px) {
     .intro {
       flex-direction: column;
@@ -41,5 +67,12 @@
     .intro-name {
       font-size: 40px;
     }
+    .intro-image{
+      border-radius: 3%;
+    height: 300px; 
+     margin:15px 0px 0px 0px;
+     width: 280px;
+    }
+      
   }
   
