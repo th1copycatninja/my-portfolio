@@ -54,13 +54,13 @@ export default function Intro() {
         margin={{ base: "20px 0px 0px 10px", md: "15gpx", lg: "15px auto" }}
         w={{ base: "300px", md: "400px", lg: "500px" }}
       >
-        <Image
+        {/* <Image
           borderRadius="10px"
           h={{ base: "150px", md: "300px", lg: "300px" }}
           w={{ base: "250px", md: "400px", lg: "500px" }}
           src={require("../../Image/doug.gif")}
           alt="cool cool cool"
-        />
+        /> */}
       </Box>
    
    
