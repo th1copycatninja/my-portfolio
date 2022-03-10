@@ -31,7 +31,7 @@ const NavBar = () =>{
                              <Link style={{color:darkmode && "#fff"}} className="nav-li-item" to="/project">Project</Link>
                              <Link style={{color:darkmode && "#fff"}} className="nav-li-item" to="/contact">Contact</Link> */}
      
-                            {/* <Toggle/> */}
+                            <Toggle/>
                        
                     </nav>
             </div>

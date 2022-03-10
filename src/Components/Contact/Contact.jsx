@@ -1,16 +1,15 @@
 import React, { useRef, useContext, useState } from "react";
 import "./Contact.css";
-import Mail from "../../Image/message.png";
-import Address from "../../Image/address.png";
-import Github from "../../Image/github.png";
-import LinkedIn from "../../Image/linkedin.png";
 import emailjs from "@emailjs/browser";
 import { ThemeContext } from "../../Context";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {toast } from 'react-toastify';
-import { Oval } from  'react-loader-spinner'
+import { Oval } from  'react-loader-spinner';
+import { BsGithub,BsLinkedin,BsTwitter ,BsFillHouseFill,BsMailbox2} from "react-icons/bs";
+import { Icon } from "@chakra-ui/react";
 export default function Contact() {
+  
     const [isLoader,setLoader] = useState(false)
   const theme = useContext(ThemeContext);
   const darkmode = theme.state.darkmode;
@@ -77,16 +76,16 @@ export default function Contact() {
  
   return (
     <div className="c">
-      <div className="c-bg"></div>
+      {/* <div className="c-bg"></div> */}
       <div className="c-wrapper">
         <div className="c-left">
           <div className="c-info">
             <div className="c-info-item">
-              <img src={Mail} alt="" className="c-icon" />
+              <Icon as={BsMailbox2} alt="mail" className="c-icon" />
               govind302034@gmail.com
             </div>
             <div className="c-info-item">
-              <img src={Address} alt="" className="c-icon" />
+              <Icon as={BsFillHouseFill} alt="home" className="c-icon" />
               Jaipur,Rajasthan,India
             </div>
             {/* <div className="c-info-item"> */}
@@ -95,19 +94,20 @@ export default function Contact() {
               href="https://github.com/govind1530"
               target="_blank"
               rel="noreferrer"
+              style={{ color:darkmode ?"#fff" :"#0284c7"}}
             >
-              <img src={Github} alt="" className="c-icon" />
+              <Icon  as={BsGithub} alt="github" className="c-icon" />
+          
               GitHub
             </a>
-            {/* </div> */}
-            {/* <div className="c-info-item"> */}
             <a
               className="c-info-item"
               href="https://www.linkedin.com/in/govind-maheshwari-75ab32b3/"
               target="_blank"
               rel="noreferrer"
+              style={{ color:darkmode ?"#fff" :"#0284c7"}}
             >
-              <img src={LinkedIn} alt="" className="c-icon" />
+              <Icon as={BsLinkedin} alt="linkedin" className="c-icon" />
               LinkedIn
             </a>
             {/* </div> */}
