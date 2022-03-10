@@ -84,10 +84,10 @@ export default function Contact() {
               <Icon as={BsMailbox2} alt="mail" className="c-icon" />
               govind302034@gmail.com
             </div>
-            <div className="c-info-item">
+            {/* <div className="c-info-item">
               <Icon as={BsFillHouseFill} alt="home" className="c-icon" />
-              Jaipur,Rajasthan,India
-            </div>
+             India
+            </div> */}
             {/* <div className="c-info-item"> */}
             <a
               className="c-info-item"
